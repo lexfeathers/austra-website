@@ -36,7 +36,7 @@ cms.storage(
 );
 // Configure a folder to upload files
 cms.upload(
-  "uploads: upload to this for use in posts/pages", 
+  "uploads: upload files here for use in posts/pages", 
   "src:uploads",
 );
 
