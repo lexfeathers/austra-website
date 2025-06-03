@@ -35,7 +35,7 @@ cms.storage(
     repo: "austra-website",
   })
 );
-cms.upload("images", "src:assets/images");
+cms.upload("uploads", "src:/uploads");
 
 cms.collection({
   name: "posts",
