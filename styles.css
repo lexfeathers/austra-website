@@ -108,7 +108,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding-top: 2rem;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
     margin-bottom: 0.5rem;
 }
 header #header-title {
@@ -132,6 +132,7 @@ main {
 footer {
     justify-content: space-between;
     align-items: center;
+    padding-top: 0 !important;
 }
 footer .menu-item:last-child {
     margin: 0;
