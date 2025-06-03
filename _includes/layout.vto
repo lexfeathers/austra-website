@@ -17,10 +17,7 @@
         {{ content }}
     </main>
     <footer>
-        <p>&copy; <span id='currentyear'></span> Austra</p>
+        <p>&copy; {{ date |> date('y') }} Austra</p>
     </footer>
-    <script>
-        document.getElementByID("currentyear").innerHTML = new Date().getFullYear;
-    </script>
 </body>
 </html>
