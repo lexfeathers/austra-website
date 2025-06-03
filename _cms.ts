@@ -82,11 +82,34 @@ cms.collection({
   ],
   documentName: "{title}.md",
 });
+cms.collection({
+  name: "pages",
+  store: "src:pages/*",
+  fields: [
+    {
+      name: "title",
+      type: "text",
+    },
+    {
+      name: "draft",
+      type: "checkbox",
+    },
+    {
+      name: "content",
+      type: "markdown",
+      upload: "images",
+      label: "Page content",
+      value: "Write **markdown** code here",
+      description: `<a target="_blank" href="https://www.markdownguide.org">More info about markdown syntax</a>`,
+    },
+  ],
+  documentName: "{title}.md",
+});
 cms.document({
   name: "Index",
   description: "Edit the content of the homepage",
   store: "src:index.md",
-  fields: ["title: text", "excerpt: text", "content: markdown"],
+  fields: ["title: text", "content: markdown"],
 });
 
 export default cms;
