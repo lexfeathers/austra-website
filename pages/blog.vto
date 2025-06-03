@@ -1,0 +1,26 @@
+---
+title: News
+---
+<h2>{{ title }}</h2>
+<span><a href="/feed.rss">RSS</a></span>
+
+<div class="blog-list__container">
+    {{ set posts = search.pages("type=posts", "date=desc") }}
+    
+    {{ if posts.length >= 1 }}
+        <ul class="blog-list">
+            {{ for post of posts }}
+                <a href="{{ post.url }}">
+                <li class="blog-list__item">
+                <span>
+                    <u><b>{{ post.title }}</b></u> 
+                    - <time datetime="{{ post.date |> date('HUMAN_DATE')}}">{{ post.date |> date('HUMAN_DATE')}}</time>
+                </span>
+                </li>
+                </a>
+            {{ /for }}    
+        </ul>
+    {{ else }}
+        <p>Nothing here yet...</p>
+    {{ /if }}
+</div>

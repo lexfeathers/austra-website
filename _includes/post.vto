@@ -1,0 +1,19 @@
+---
+layout: layout.vto
+---
+<a href="/pages/blog" role="button" class="button"><- all posts</a>
+
+<article>
+    <h2>{{ title }}</h2>
+    
+    {{ if author }}
+        <p>
+            by {{ author }} on 
+            <time datetime="{{ date |> date('HUMAN_DATE')}}">{{ date |> date('HUMAN_DATE')}}</time>
+        </p>
+    {{ /if }}
+
+    {{# <hr> #}}
+
+    {{ content |> safe }}
+</article>
