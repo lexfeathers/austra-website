@@ -88,7 +88,7 @@ cms.collection({
 });
 cms.collection({
   name: "pages",
-  store: "src:pages/*",
+  store: "src:pages/*{.md,.vto}",
   fields: [
     {
       name: "title",
