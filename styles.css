@@ -1,15 +1,38 @@
+/* Fonts */
+    @font-face {
+        font-family: ;
+        src: url();
+    }
+    @font-face {
+        font-family: "Ready ActiveBold";
+        src: url("assets/FONTS/Ready/Ready-ActiveBold.otf");
+    }
+    @font-face {
+        font-family: "Ready ActiveLight";
+        src: url("assets/FONTS/Ready/Ready-ActiveLight.otf");
+    }
+    @font-face {
+        font-family: "Ready ActiveRegular";
+        src: url("assets/FONTS/Ready/Ready-ActiveRegular.otf");
+    }
+    @font-face {
+        font-family: "Avant Garde Gothic Book";
+        src: url("assets/FONTS/Avant Garde Gothic/ITC Avant Garde Gothic LT Book.ttf");
+    }
+
+/* Main variables */
 :root {
     --color-text: #010101;
     --color-background: #ffffff;
     --color-background-secondary: #ececec;
-    --color-secondary: rgb(0 0 255);
+    --color-secondary: #0444fc;
 
     --text-small: 12pt;
     --text-medium: 16pt;
     --text-large: 20pt;
 
     --font-serif: Georgia, serif;
-    --font-sans-serif: 'Inter', sans-serif;
+    --font-sans-serif: 'Avant Garde Gothic Book', sans-serif;
     
     --page-width: 1200px;
     --radius: 4px;
@@ -62,7 +85,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0;
+    padding-top: 2rem;
     padding-bottom: 0;
     margin-bottom: 0.5rem;
 }
@@ -76,6 +99,10 @@ header #header-title {
     font-family: var(--font-blocky);
     font-weight: 400;
 }
+header .logo {
+    width: 250px;
+}
+
 main {
     flex-direction: column;
     flex-grow: 1;
@@ -155,6 +182,12 @@ a > .blog-list__item:hover {
         width: calc(100% - 3rem);
         padding: 2rem 1.5rem;
     }
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        text-align: center
+    };
     header #header-title {
         font-size: calc(var(--text-small) - 25%);
     }
