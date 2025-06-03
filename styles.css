@@ -22,6 +22,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 h1,
 h2,
@@ -30,7 +31,8 @@ h3 {
 }
 
 a {
-    color: var(--color-secondary)
+    color: var(--color-secondary);
+    transition: .2s;
 }
 a:hover {
     color: color-mix(in srgb, var(--color-secondary), var(--color-text) 20%);
