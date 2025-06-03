@@ -31,7 +31,7 @@ cms.storage(
   new GitHub({
     client: new Octokit({ auth: Deno.env.get("GITHUB_TOKEN") }),
     owner: "lexfeathers",
-    repo: "featherdroid",
+    repo: "austra-website",
   })
 );
 cms.upload("images", "src:assets/images");
