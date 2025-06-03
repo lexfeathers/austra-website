@@ -2,7 +2,7 @@
     --color-text: white;
     --color-background: #010101;
     --color-background-secondary: #111;
-    --color-secondary: blue;
+    --color-secondary: rgb(0 0 255);
 
     --text-small: 12pt;
     --text-medium: 16pt;
