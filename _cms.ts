@@ -14,6 +14,7 @@ const username = Deno.env.get("USERNAME");
 const password = Deno.env.get("PASSWORD");
 
 const cms = lumeCMS({
+  basePath: "/admin",
   site: {
     name: "Austra",
     url: "https://austra-site.netlify.app",
