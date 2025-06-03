@@ -7,17 +7,28 @@
     <meta name="robots" content="noai, noimageai">
     <meta property="og:type" content="website">
     <meta name="author" content="Austra">
-    <title>Austra - {{title}}</title>
+    <title>{{ name }} - {{title}}</title>
 </head>
 <body>
     <header>
-        <h1>Austra</h1>
+        <a href="/" id="header-title">
+            <h1>> {{ name }} ~</h1>
+        </a>
+        <nav>
+            <ul>
+                {{ for page of search.pages("type=pages") }}
+                    <li class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {{ /for }}
+            </ul>
+        </nav>
     </header>
+
     <main>
-        {{ content }}
+        {{ content |> safe }}
     </main>
+
     <footer>
-        <p>&copy; {{ date |> date('y') }} Austra</p>
+        <span id="copyright">&copy; {{ date |> date('y') }} {{ name }}</span>
     </footer>
 </body>
 </html>
