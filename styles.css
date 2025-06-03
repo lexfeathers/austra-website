@@ -90,7 +90,7 @@ header, footer, main {
 }
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 0;
@@ -129,6 +129,10 @@ hr {
     background-color: var(--color-secondary);
     border: none;
     width: 100%;
+}
+
+.splash {
+    margin: auto;
 }
 
 header > nav > ul {

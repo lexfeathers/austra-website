@@ -11,10 +11,10 @@
 </head>
 <body>
     <header>
-        <a href="/" id="header-title">
+        <!--<a href="/" id="header-title">
             {{# <h1>{{ name }}</h1> #}}
             <img src="/assets/images/Austra LIGHT Logo-01.png" alt="Austra" title="Austra" class="logo">
-        </a>
+        </a>-->
         <nav>
             <ul>
                 {{ for page of search.pages("type=pages") }}
@@ -23,7 +23,7 @@
             </ul>
         </nav>
     </header>
-    <div class="page-width center"><hr></div>
+    {{# <div class="page-width center"><hr></div> #}}
 
     <main>
         {{ content |> safe }}
