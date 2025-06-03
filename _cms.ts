@@ -35,7 +35,11 @@ cms.storage(
     repo: "austra-website",
   })
 );
-cms.upload("uploads", "src:uploads");
+// Configure a folder to upload files
+cms.upload(
+  "uploads: upload to this for use in posts/pages", 
+  "src:uploads",
+);
 
 cms.collection({
   name: "posts",
