@@ -1,3 +1,3 @@
 ---
-title: shows
+title: Shows
 ---
