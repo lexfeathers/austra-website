@@ -50,7 +50,7 @@ cms.collection({
     {
       name: "author",
       type: "text",
-      init(field) {
+      init(field: { value: string; }) {
         field.value = "Austra";
       },
     },
@@ -61,7 +61,7 @@ cms.collection({
     {
       name: "date",
       type: "datetime",
-      init(field) {
+      init(field: { value: Date; }) {
         field.value = new Date("yyyy, MM, dd");
       },
     },
