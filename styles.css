@@ -216,6 +216,11 @@ a > .blog-list__item:hover {
     border-color: color-mix(in srgb, var(--color-secondary), white 20%);
 }
 
+.icon {
+    max-width: 3rem;
+    /* margin: 1rem; */
+}
+
 /* Contact form */
 section:has(.contact) {
     margin: auto;
