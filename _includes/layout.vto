@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="robots" content="noai, noimageai">
+    <meta property="og:type" content="website">
+    <meta name="author" content="Austra">
+    <title>Austra - {{title}}</title>
+</head>
+<body>
+    <header>
+        <h1>Austra</h1>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; <span id='currentyear'></span> Austra</p>
+    </footer>
+    <script>
+        document.getElementByID("currentyear").innerHTML = new Date().getFullYear;
+    </script>
+</body>
+</html>
