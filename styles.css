@@ -161,6 +161,9 @@ header > nav > ul {
     display: inline;
     margin-right: 1rem;
 }
+.menu-item:last-child {
+    margin-right: 0;
+}
 .menu-item a:not(.menu-item a:hover) {
     text-decoration: none;
 }
