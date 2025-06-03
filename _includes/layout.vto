@@ -13,7 +13,9 @@
     <header class="{{ if title !== "home"}}spread{{ /if }}">
         {{ if title !== "home" }}
             <a href="/" id="header-title">
-                <img src="/assets/images/Austra_Light_Logo-01_blue.png" alt="Austra" title="Austra" class="logo">
+            <div class="logo" alt="Austra">
+                {{ include "logo.vto" }} 
+            </div>
             </a>
         {{ /if }}
         <nav>

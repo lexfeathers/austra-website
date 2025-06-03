@@ -221,6 +221,10 @@ a > .blog-list__item:hover {
     /* margin: 1rem; */
 }
 
+svg {
+    vertical-align: middle;
+}
+
 /* Contact form */
 section:has(.contact) {
     margin: auto;
