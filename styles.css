@@ -29,6 +29,7 @@ h1,
 h2,
 h3 {
     font-family: var(--font-sans-serif-bold);
+    font-weight: 400;
 }
 
 a {
@@ -63,7 +64,7 @@ header #header-title {
 }
 #header-title h1 {
     font-family: var(--font-blocky);
-    font-weight: lighter;
+    font-weight: 400;
 }
 main {
     flex-direction: column;
@@ -108,20 +109,22 @@ header > nav > ul {
 }
 .blog-list__item {
     /* background-color: color-mix(in srgb, var(--color-secondary), var(--color-background) 30%); */
-    border: var(--border-width) solid var(--color-secondary);
+    /* border: var(--border-width) solid var(--color-secondary); */
+    background-color: var(--color-background);
     color: var(--color-text);
     list-style-type: square;
     padding: 1rem;
     margin: 0.8rem 0;
     font-weight: 400;
     transition: 200ms ease-out;
-    border-radius: 0 0 2rem 0;
+    border-radius: 0 2rem 2rem 0;
 }
 .blog-list > a {
     text-decoration: none;
 }
 a > .blog-list__item:hover {
-    box-shadow: inset 800px 0px 0px var(--color-background);
+    box-shadow: inset var(--page-width) 0px 0px var(--color-background-secondary);
+    color: var(--color-secondary);
 }
 .blog-list__item::marker {
     transition: 100ms ease-out;
