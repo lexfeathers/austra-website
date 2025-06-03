@@ -10,11 +10,12 @@
     <title>{{ name }} - {{title}}</title>
 </head>
 <body>
-    <header>
-        <!--<a href="/" id="header-title">
-            {{# <h1>{{ name }}</h1> #}}
-            <img src="/assets/images/Austra LIGHT Logo-01.png" alt="Austra" title="Austra" class="logo">
-        </a>-->
+    <header class="{{ if title !== "Home"}}spread{{ /if }}">
+        {{ if title !== "Home" }}
+            <a href="/" id="header-title">
+                <img src="/assets/images/Austra_Light_Logo-01_blue.png" alt="Austra" title="Austra" class="logo">
+            </a>
+        {{ /if }}
         <nav>
             <ul>
                 {{ for page of search.pages("type=pages") }}

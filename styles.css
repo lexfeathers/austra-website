@@ -52,6 +52,10 @@
   clip: rect(0 0 0 0);
   word-wrap: normal !important;
 }
+.spread {
+    justify-content: space-between;
+    align-items: center;
+}
 
 body {
     color: var(--color-text);
@@ -107,7 +111,7 @@ header #header-title {
     font-weight: 400;
 }
 header .logo {
-    width: 250px;
+    max-width: 218px;
 }
 
 main {
