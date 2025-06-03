@@ -31,11 +31,12 @@
     </main>
 
     <footer>
-        <menu>
-            <li class="menu-item"><a href="/">Impressum</a></li>
-            <li class="menu-item"><a href="/">Contact</a></li>
-        </menu>
         <span id="copyright">&copy; {{ date |> date('y') }} {{ name }}</span>
+        <menu>
+        {{ for link of search.pages("type=utility") }}
+            <li class="menu-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {{ /for }}
+        </menu>
     </footer>
 </body>
 </html>

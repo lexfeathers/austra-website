@@ -1,3 +1,23 @@
+
+/* Main variables */
+:root {
+    --color-text: #010101;
+    --color-background: #ffffff;
+    --color-background-secondary: #ececec;
+    --color-secondary: #0444fc;
+    
+    --text-small: 12pt;
+    --text-medium: 16pt;
+    --text-large: 20pt;
+    
+    --font-serif: Georgia, serif;
+    --font-sans-serif: 'Avant Garde Gothic Book', sans-serif;
+    
+    --page-width: 1200px;
+    --radius: 4px;
+    --border-width: 1px;
+}
+
 /* Fonts */
     @font-face {
         font-family: "Ready ActiveBold";
@@ -15,25 +35,6 @@
         font-family: "Avant Garde Gothic Book";
         src: url("assets/FONTS/Avant Garde Gothic/ITC Avant Garde Gothic LT Book.ttf");
     }
-
-/* Main variables */
-:root {
-    --color-text: #010101;
-    --color-background: #ffffff;
-    --color-background-secondary: #ececec;
-    --color-secondary: #0444fc;
-
-    --text-small: 12pt;
-    --text-medium: 16pt;
-    --text-large: 20pt;
-
-    --font-serif: Georgia, serif;
-    --font-sans-serif: 'Avant Garde Gothic Book', sans-serif;
-    
-    --page-width: 1200px;
-    --radius: 4px;
-    --border-width: 1px;
-}
 
 /* Helpers */
 .page-width {
@@ -85,7 +86,7 @@ h3 {
 
 a {
     color: var(--color-secondary);
-    transition: ease-out 200ms;
+    /* transition: ease-out 200ms; */
 }
 a:hover {
     color: color-mix(in srgb, var(--color-secondary), var(--color-text) 30%);
@@ -198,6 +199,16 @@ a > .blog-list__item:hover {
     color: var(--color-text);
 }
 
+.button {
+    padding: .5rem;
+    border: calc(var(--border-width) * 2) solid var(--color-secondary);
+    background-color: var(--color-background);
+    border-radius: var(--radius);
+    color: var(--color-text);
+    font-family: var(--font-sans-serif);
+    font-size: var(--text-medium);
+    cursor: pointer;
+}
 .button:hover {
     border-color: color-mix(in srgb, var(--color-secondary), white 20%);
 }
@@ -239,8 +250,8 @@ form.contact {
   font-size: var(--text-small);
   background-color: var(--color-background);
   color: var(--color-text);
-  border: 2px solid var(--color-secondary);
-  border-radius: 6px;
+  border: 2px solid color-mix(in srgb, var(--color-text), var(--color-background) 60%);
+  border-radius: var(--radius);
   transition: ease-out .2s;
 }
 .contact textarea {
@@ -263,7 +274,6 @@ form.contact {
 /* End contact form */
 
 /* Mobile styling */
-
 @media screen and (max-width: 749px) {
     header, footer, main {
         width: calc(100% - 3rem);
