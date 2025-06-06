@@ -10,8 +10,8 @@ Deno.env.set("TZ", "US/Eastern");
 const date = new Date();
 const formattedDate = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
 
-const username = Deno.env.get("USERNAME");
-const password = Deno.env.get("PASSWORD");
+const username = Deno.env.get("USERNAME") || "admin";
+const password = Deno.env.get("PASSWORD") || "default";
 
 const cms = lumeCMS({
   site: {
