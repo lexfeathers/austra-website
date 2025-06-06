@@ -16,7 +16,7 @@ const password = Deno.env.get("PASSWORD");
 const cms = lumeCMS({
   site: {
     name: "Austra",
-    url: "https://austra-site.netlify.app",
+    url: "https://austra.fyi",
   },
   auth: {
     method: "basic",
