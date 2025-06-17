@@ -20,8 +20,8 @@
         {{ /if }}
         <nav>
             <ul>
-                {{# Direct Merch link to Bandcamp- un-comment to enable: #}}
-                {{# <li class="menu-item"><a href="https://austramusic.bandcamp.com/merch" target="_blank">merch</a></li> #}}
+                {{# Direct Merch link to Bandcamp #}}
+                <li class="menu-item"><a href="https://austramusic.bandcamp.com/merch" target="_blank">merch</a></li>
                 {{ for page of search.pages("type=pages") }}
                     <li class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
                 {{ /for }}
