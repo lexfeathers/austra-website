@@ -319,4 +319,8 @@ form.contact {
     .blog-list__item {
         font-size: var(--text-small);
     }
+
+    footer .menu-item {
+        margin: 0 0 1rem 0;
+    }
 }

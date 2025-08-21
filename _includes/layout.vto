@@ -21,7 +21,7 @@
         <nav>
             <ul>
                 {{# Direct Merch link to Bandcamp #}}
-                <li class="menu-item"><a href="https://austramusic.bandcamp.com/merch" target="_blank">merch</a></li>
+                <li class="menu-item"><a href="https://merch.ambientinks.com/collections/austra" target="_blank">merch</a></li>
                 {{ for page of search.pages("type=pages") }}
                     <li class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
                 {{ /for }}
@@ -41,6 +41,7 @@
             {{ /for }}
             </menu>
         {{ /if }}
+        <li class="menu-item"><a href="https://www.instagram.com/austra/" target="_blank">instagram</a></li>
         <span class="icon"><img src="/assets/images/illustration14_400.png"></span>
         <p id="copyright">&copy; {{ date |> date('y') }} {{ name }}</p>
     </footer>
