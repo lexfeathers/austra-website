@@ -1,6 +1,12 @@
 <div class="image-with-text">
   <div class="image-with-text__image">
-    <img src="{{ image_url }}" alt="{{ image_alt }}" />
+	{{ if image_link }}
+		<a href="{{ image_link }}">
+	{{ /if }}
+      <img src="{{ image_url }}" alt="{{ image_alt }}" />
+    {{ if image_link }}
+		</a>
+	{{ /if }}
   </div>
   <div class="image-with-text__text">
     <h2>{{ heading }}</h2>

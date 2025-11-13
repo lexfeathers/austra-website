@@ -133,6 +133,10 @@ header #header-title {
 }
 header .logo {
     max-width: 218px;
+	transition: .1s;
+	&:hover {
+		opacity: .6;
+	}
 }
 
 main {
@@ -143,6 +147,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 0 !important;
+}
+menu {
+	padding-left: 0;
 }
 footer .menu-item:last-child {
     margin: 0;
@@ -178,6 +185,7 @@ iframe[src*="bandcamp.com"] {
 	display: flex;
 	gap: calc(var(--padding));
 	width: 100%;
+	margin-bottom: calc(var(--padding) * 2);
 }
 .image-with-text__image {
 	flex-basis: 50%;
@@ -337,6 +345,7 @@ form.contact {
 		margin: 0 auto;
 	}
 	.image-with-text__image {
+		min-width: 60%;
 		border-radius: var(--radius);
 		display: flex;
 		justify-content: center;
@@ -420,5 +429,6 @@ form.contact {
 		flex-grow: 0;
 		flex-shrink: 1;
 		flex-basis: 0;
+		text-align: center;
 	}
 }
