@@ -1,0 +1,38 @@
+---
+layout: layout.vto
+title: home
+---
+{{# Generic splash logo: #}}
+{{# <img class="splash" src="assets/images/Austra_Light_Logo-01_blue.svg" alt="Austra" title="Austra" /> #}}
+
+{{# Album feature: #}}
+{{# {{
+  await comp.ImageWithText({
+    image_url: "uploads/Austra-Cover-Crop.jpg",
+    image_alt: "The cover for Austra's 'Chin Up Buttercup",
+    heading: "Chin Up Buttercup",
+    text: "Available everywhere",
+    button_link: "https://austra.bandcamp.com/album/chin-up-buttercup",
+    button_label: "Buy album",
+  })
+}} #}}
+
+{{# Video feature: #}}
+{{
+  await comp.SectionHeading({
+    heading: "New music video",
+    blurb: "'Fallen Cloud', taken from upcoming album 'Chin Up Buttercup'",
+    alignment: "vertical",
+  })
+}}
+{{# Youtube embed: #}}
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/T5foC-AaDUk?si=0O_Jh3lH7za2qjZ8"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>

@@ -15,6 +15,7 @@
     
     --page-width: 1200px;
     --radius: 4px;
+	--padding: 2rem;
     --border-width: 1px;
 }
 
@@ -91,6 +92,15 @@ a {
 a:hover {
     color: color-mix(in srgb, var(--color-secondary), var(--color-text) 30%);
 }
+a.external:not(a:has(img)):after {
+	content: '↗';
+	font-family: 'Fira code', sans-serif, monospace !important;
+	color: var(--colour-text);
+	padding-left: 4px;
+	font-size: 10pt;
+	vertical-align: top;
+	opacity: 0.5;
+}
 
 header, footer, main {
     display: flex;
@@ -152,6 +162,35 @@ hr {
 .splash {
     margin: auto;
 }
+
+iframe[title="YouTube video player"],
+iframe[src*="bandcamp.com"] {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 650px;
+  border-radius: var(--radius);
+  box-shadow: 0px 4px 8px var(--colour-background);
+}
+
+/* Components */
+.image-with-text {
+	display: flex;
+	gap: calc(var(--padding));
+	width: 100%;
+}
+.image-with-text__image {
+	flex-basis: 50%;
+	flex-grow: 1;
+}
+.image-with-text__text {
+	display: flex;
+	flex-basis: 50%;
+	gap: 0;
+	flex-direction: column;
+	justify-content: center;
+}
+/* End components */
 
 header > nav > ul {
     list-style: none;
@@ -286,8 +325,44 @@ form.contact {
 }
 /* End contact form */
 
+/* Desktop-only styling */
+@media screen and (min-width: 1200px) {
+	:root {
+		--page-width: calc(1200px - calc(var(--padding) * 2));
+	}
+	header,
+	main,
+	footer {
+		width: var(--page-width);
+		margin: 0 auto;
+	}
+	.image-with-text__image {
+		border-radius: var(--radius);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+}
+/* Tablet styling */
+@media screen and (min-width: 636px) and (max-width: 1199px) {
+	:root {
+		--page-width: calc(100% - calc(var(--padding) * 2));
+	}
+	.image-with-text {
+		display: flex;
+		gap: calc(var(--padding) * 2);
+		width: 100%;
+	}
+	.image-with-text__image {
+		flex-grow: 1;
+	}
+	.image-with-text__text {
+		gap: 0;
+	}
+}
 /* Mobile styling */
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 635px) {
     header, footer, main {
         width: calc(100% - 3rem);
         padding: 2rem 1.5rem;
@@ -316,6 +391,11 @@ form.contact {
         font-size: var(--text-small);
     }
 
+	iframe[title="YouTube video player"],
+	iframe[src*="bandcamp.com"] {
+		height: 350px;
+	}
+
     .blog-list__item {
         font-size: var(--text-small);
     }
@@ -323,4 +403,22 @@ form.contact {
     footer .menu-item {
         margin: 0 0 1rem 0;
     }
+
+	.image-with-text {
+		flex-direction: column;
+	}
+	.image-with-text__image {
+		min-width: 100%;
+		flex-basis: 100%;
+		flex-grow: 1;
+		& > img {
+			 min-width: 100%;
+		}
+	}
+	.image-with-text__text {
+		display: flex;
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: 0;
+	}
 }

@@ -1,0 +1,36 @@
+<div class="horizontal-gallery">
+  {{ for card of cards }}
+    <a href="{{card.card_url}}" class="card-link grid-item">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{card.image_url}}" alt="{{card.image_alt}}">
+        </div>
+        <div class="card-text">
+          <h3>{{card.heading}}</h3>
+          <p>{{card.blurb}}</p>
+        </div>
+      </div>
+    </a>
+  {{ /for }}
+</div>
+
+<style>
+    .horizontal-gallery {
+        display: grid;
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat({{cards.length}}, 1fr);
+        & .grid-item {
+            & .card {
+                max-width: 100%;
+                & .card-image img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 839px) {
+        .horizontal-gallery {
+            grid-template-columns: auto;
+        }
+    }
+</style>

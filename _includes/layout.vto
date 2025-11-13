@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
     <meta name="robots" content="noai, noimageai">
     <meta property="og:type" content="website">
     <meta name="author" content="Austra">
-    <title>{{ name }} - {{title}}</title>
-</head>
-<body>
-    <header class="{{ if title !== "home"}}spread{{ /if }}">
-        {{ if title !== "home" }}
-            <a href="/" id="header-title">
-            <div class="logo" alt="Austra">
-                {{ include "logo.vto" }} 
-            </div>
-            </a>
-        {{ /if }}
-        <nav>
-            <ul>
-                {{# Direct Merch link to Bandcamp #}}
-                <li class="menu-item"><a href="https://merch.ambientinks.com/collections/austra" target="_blank">merch</a></li>
-                {{ for page of search.pages("type=pages") }}
-                    <li class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {{ /for }}
-            </ul>
-        </nav>
+    <title>{{ name }} - {{ title }}</title>
+  </head>
+  <body>
+    <header class="spread">
+      <a href="/" id="header-title">
+        <div class="logo" alt="Austra">
+          {{ include "logo.vto" }}
+        </div>
+      </a>
+      <nav>
+        <ul>
+          {{# Direct Merch link to Bandcamp #}}
+          <li class="menu-item">
+            <a
+              href="https://merch.ambientinks.com/collections/austra"
+              target="_blank"
+            >merch</a>
+          </li>
+          {{ for page of search.pages("type=pages") }}
+            <li class="menu-item">
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {{ /for }}
+        </ul>
+      </nav>
     </header>
 
     <main>
-        {{ content |> safe }}
+      {{ content |> safe }}
     </main>
 
     <footer>
-        {{ if search.pages("type=utility").length > 0 }}
-            <menu>
-            {{ for link of search.pages("type=utility") }}
-                <li class="menu-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {{ /for }}
-            </menu>
-        {{ /if }}
-        <li class="menu-item"><a href="https://www.instagram.com/austra/" target="_blank">instagram</a></li>
-        <span class="icon"><img src="/assets/images/illustration14_400.png"></span>
-        <p id="copyright">&copy; {{ date |> date('y') }} {{ name }}</p>
+      {{ if search.pages("type=utility").length > 0 }}
+        <menu>
+          {{ for link of search.pages("type=utility") }}
+            <li class="menu-item">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {{ /for }}
+        </menu>
+      {{ /if }}
+      <li class="menu-item">
+        <a href="https://www.instagram.com/austra/" target="_blank"
+        >instagram</a>
+      </li>
+      <span class="icon"><img
+          src="/assets/images/illustration14_400.png"
+        ></span>
+      <p id="copyright">&copy; {{ date |> date("y") }} {{ name }}</p>
     </footer>
-</body>
+    <script>
+      // Make all external links open in a new tab and apply external class
+      Array.from(document.links)
+        .filter((link) => link.hostname != window.location.hostname)
+        .forEach((link) =>
+          link.target = "_blank" && link.classList.add("external")
+        );
+    </script>
+  </body>
 </html>

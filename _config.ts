@@ -41,6 +41,7 @@ site.use(feed({
 site.use(metas());
 
 site.add("./assets");
+site.add("./uploads");
 site.add("./styles.css");
 
 export default site;

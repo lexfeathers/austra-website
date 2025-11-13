@@ -1,0 +1,42 @@
+{{# 
+    Usage syntax:
+    {{ await comp.SectionHeading({heading: "Welcome!", blurb: "This is a section heading's blurb"}) }} 
+#}}
+
+<div class="section-heading">
+  <h2>{{ heading }}</h2>
+  <p class="section-heading__blurb">{{ blurb }}</p>
+</div>
+
+<style>
+  .section-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+	{{ if alignment == "vertical" }} /* Check for vertical alignment argument */
+		align-items: flex-start;
+		flex-direction: column;
+		& .section-heading__blurb {
+			text-align: left;
+		}
+	{{ /if }}
+  }
+  {{ if alignment != "vertical" }} /* Check for vertical alignment argument */
+	.section-heading > * {
+		width: 50%;
+	}
+  {{ /if }}
+  .section-heading__blurb {
+    text-align: right;
+  }
+  @media screen and (max-width: 1199px) {
+    .section-heading {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .section-heading > * {
+      width: 100%;
+	  text-align: center;
+    }
+  }
+</style>
