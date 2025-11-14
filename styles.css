@@ -142,6 +142,7 @@ header .logo {
 main {
     flex-direction: column;
     flex-grow: 1;
+	color: var(--color-secondary); /* Need to differentiate links better */
 }
 footer {
     justify-content: space-between;
@@ -332,6 +333,19 @@ form.contact {
   }
 }
 /* End contact form */
+
+/* Grant logos on homepage */
+.grant-logos {
+	margin: var(--padding) auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	& img {
+		max-width: 25%;
+		max-height: auto;
+	}
+}
+/* end grant logos */
 
 /* Desktop-only styling */
 @media screen and (min-width: 1200px) {
