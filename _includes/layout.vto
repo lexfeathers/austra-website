@@ -12,9 +12,11 @@
   <body>
     <header class="spread">
       <a href="/" id="header-title">
+        {{# {{ if title != "home" }} #}}
         <div class="logo" alt="Austra">
           {{ include "logo.vto" }}
         </div>
+        {{# {{ /if }} #}}
       </a>
       <nav>
         <ul>

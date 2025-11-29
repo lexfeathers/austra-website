@@ -1,0 +1,74 @@
+---
+title: news
+draft: false
+---
+{{# Album feature: #}}
+{{
+  await comp.ImageWithText({
+    image_url: "/uploads/Austra-Cover-Crop.jpg",
+    image_alt: "The cover for Austra's 'Chin Up Buttercup",
+    image_link: "https://austra.bandcamp.com/album/chin-up-buttercup",
+    heading: "Chin Up Buttercup",
+    text: "New album out now",
+    button_link: "https://austra.bandcamp.com/album/chin-up-buttercup",
+    button_label: "Buy / Stream",
+  })
+}}
+
+<hr>
+
+{{# Video feature: #}}
+{{
+  await comp.SectionHeading({
+    heading: "Music Videos",
+    blurb: "Taken from 'Chin Up Buttercup'",
+    alignment: "vertical",
+  })
+}}
+<h2>Fallen Cloud</h2>
+{{# Youtube embed: #}}
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/T5foC-AaDUk?si=0O_Jh3lH7za2qjZ8"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+<h2>Siren Song</h2>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/nF3DuUOL00k?si=-oyVaTq8Jzgp2LLG"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+<h2>Math Equation</h2>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/CUDXzgQABEE?si=ruh7ZsJOb1LEqHMa"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+{{# Logos for FACTOR and The Government of Canada #}}
+<div class="grant-logos">
+  <img
+    src="/uploads/FACTOR Logo Files/FACTOR-Standalone-CMYK-Blue.png"
+    alt="The logo for FACTOR Canada"
+  >
+  <img
+    src="/uploads/Canada Wordmark Files/CanadaWordmark-Standalone-CMYK-Blue.png"
+    alt="The Government of Canada Logo"
+  >
+</div>

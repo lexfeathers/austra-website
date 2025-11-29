@@ -162,7 +162,7 @@ img {
 }
 
 hr {
-    height: var(--border-width);
+    height: calc(var(--border-width) * 2);
     background-color: var(--color-secondary);
     border: none;
     width: 100%;
@@ -425,7 +425,7 @@ form.contact {
     }
 
     footer .menu-item {
-        margin: 0 0 1rem 0;
+        margin: 0 1rem 1rem 0;
     }
 
 	.image-with-text {
