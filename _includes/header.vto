@@ -1,0 +1,23 @@
+<header class="spread">
+  <a href="/" id="header-title">
+    <div class="logo" role="img" alt="Austra">
+      {{ include "logo.vto" }}
+    </div>
+  </a>
+  <nav>
+    <ul>
+      {{# Direct Merch link to storefront #}}
+      <li class="menu-item">
+        <a
+          href="https://merch.ambientinks.com/collections/austra"
+          target="_blank"
+        >merch</a>
+      </li>
+      {{ for page of search.pages("type=pages") }}
+        <li class="menu-item">
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+      {{ /for }}
+    </ul>
+  </nav>
+</header>
