@@ -410,6 +410,9 @@ form.contact {
     }
     footer menu {
         padding-left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
     }
     #copyright {
         font-size: var(--text-small);
