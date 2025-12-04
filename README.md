@@ -12,7 +12,7 @@ To add content, clone the repo and add pages in the `pages/` directory. For root
 > title: example
 > ---
 > ```
-> The "layout.vto front matter ensures the page loads inside the layout.vto file, which contains the basic HTML setup to display other elements of the site.
+> The "layout.vto" front matter ensures the page loads inside the layout.vto file, which contains the basic HTML setup to display other elements of the site.
 
 ## Components 
 There are components available in `_components/` that can be used for quick content styling. For example, to create a Horizontal Gallery (grid of clickable images), you can call the component inside a Vento (.vto) file like so:
