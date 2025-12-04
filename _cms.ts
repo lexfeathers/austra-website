@@ -1,6 +1,6 @@
 import lumeCMS from "lume/cms/mod.ts";
 import GitHub from "lume/cms/storage/github.ts";
-import { Octokit } from "npm:octokit";
+// import { Octokit } from "npm:octokit";
 
 // Set site time zone
 // Timezone codes can be found at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -26,14 +26,21 @@ const cms = lumeCMS({
   },
 });
 
+// deno-lint-ignore no-explicit-any
+const token: any = Deno.env.get("GITHUB_TOKEN");
 cms.storage(
   "src",
-  new GitHub({
-    client: new Octokit({ auth: Deno.env.get("GITHUB_TOKEN") }),
-    owner: "lexfeathers",
-    repo: "austra-website",
-  })
+  GitHub.create("lexfeathers/austra-website", token)
 );
+
+// cms.storage(
+//   "src",
+//   new GitHub({
+//     client: new Octokit({ auth: Deno.env.get("GITHUB_TOKEN") }),
+//     owner: "lexfeathers",
+//     repo: "austra-website",
+//   })
+// );
 // Configure a folder to upload files
 cms.upload(
   "uploads: upload files here for use in posts/pages", 
