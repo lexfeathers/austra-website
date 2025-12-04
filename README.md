@@ -5,11 +5,10 @@ This site is built with [Lume](https://lume.land), is hosted on Github and deplo
 To add content, clone the repo and add pages in the `pages/` directory. For root level (austra.fyi/example-title), files can be added to `/`. The site can build either Vento or Markdown.
 
 > [!NOTE]
-> If placing pages into `/`, make sure to add the following to the start of the file:
+> If placing pages into `/`, make sure to add the following to the start of the file (alongside the expected `title: ""` field):
 > ```md
 > ---
 > layout: layout.vto
-> title: example
 > ---
 > ```
 > The "layout.vto" front matter ensures the page loads inside the layout.vto file, which contains the basic HTML setup to display other elements of the site.
