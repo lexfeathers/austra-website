@@ -6,8 +6,8 @@ To add content, clone the repo and add pages in the `pages/` directory. For root
 
 > [!NOTE]
 > If placing pages into `/`, make sure to add the following to the start of the file:
-> ```
-> ---md
+> ```md
+> ---
 > layout: layout.vto
 > title: example
 > ---
